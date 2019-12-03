@@ -13,7 +13,7 @@ class RepositoryModule {
 
     @Singleton
     @Provides
-    fun getNewsRepository(@com.example.newsapp.injections.AppContext context: Context, newsServices: NewsServices, dataBase: AppDataBase): NewsRepository {
-        return NewsRepository(context,newsServices,dataBase)
+    fun getNewsRepository( newsServices: NewsServices, dataBase: AppDataBase): NewsRepository {
+        return NewsRepository(newsServices,dataBase)
     }
 }
